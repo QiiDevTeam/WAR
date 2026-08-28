@@ -1,0 +1,17 @@
+[package]
+name = "war-fixture-win32"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+windows.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+war-core = { path = "../../crates/war-core" }
+war-protocol = { path = "../../crates/war-protocol" }
+war-runtime = { path = "../../crates/war-runtime" }
+war-uia = { path = "../../crates/war-uia" }
+war-win32 = { path = "../../crates/war-win32" }

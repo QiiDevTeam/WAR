@@ -1,0 +1,11 @@
+[package]
+name = "war-semantic"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+war-core = { path = "../war-core" }
+war-protocol = { path = "../war-protocol" }
+

@@ -1,0 +1,11 @@
+[package]
+name = "war-mcp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+war-runtime = { path = "../war-runtime" }

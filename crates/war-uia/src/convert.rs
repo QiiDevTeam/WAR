@@ -1,0 +1,40 @@
+use war_protocol::Role;
+use windows::Win32::UI::Accessibility::*;
+
+pub fn role(control: UIA_CONTROLTYPE_ID) -> Role {
+    match control {
+        x if x == UIA_WindowControlTypeId => Role::Window,
+        x if x == UIA_ButtonControlTypeId => Role::Button,
+        x if x == UIA_SplitButtonControlTypeId => Role::Button,
+        x if x == UIA_CheckBoxControlTypeId => Role::Checkbox,
+        x if x == UIA_RadioButtonControlTypeId => Role::Radio,
+        x if x == UIA_TextControlTypeId => Role::Text,
+        x if x == UIA_EditControlTypeId => Role::TextInput,
+        x if x == UIA_ComboBoxControlTypeId => Role::ComboBox,
+        x if x == UIA_ListControlTypeId => Role::List,
+        x if x == UIA_DataGridControlTypeId || x == UIA_TableControlTypeId => Role::List,
+        x if x == UIA_ListItemControlTypeId => Role::ListItem,
+        x if x == UIA_DataItemControlTypeId => Role::ListItem,
+        x if x == UIA_TreeControlTypeId => Role::Tree,
+        x if x == UIA_TreeItemControlTypeId => Role::TreeItem,
+        x if x == UIA_MenuControlTypeId || x == UIA_MenuBarControlTypeId => Role::Menu,
+        x if x == UIA_MenuItemControlTypeId => Role::MenuItem,
+        x if x == UIA_TabControlTypeId => Role::Tab,
+        x if x == UIA_TabItemControlTypeId => Role::TabItem,
+        x if x == UIA_ToolBarControlTypeId => Role::Toolbar,
+        x if x == UIA_TitleBarControlTypeId || x == UIA_AppBarControlTypeId => Role::Toolbar,
+        x if x == UIA_HeaderControlTypeId => Role::Group,
+        x if x == UIA_HeaderItemControlTypeId => Role::Button,
+        x if x == UIA_SliderControlTypeId => Role::Slider,
+        x if x == UIA_ThumbControlTypeId => Role::Slider,
+        x if x == UIA_ProgressBarControlTypeId => Role::ProgressBar,
+        x if x == UIA_DocumentControlTypeId => Role::Document,
+        x if x == UIA_ImageControlTypeId => Role::Image,
+        x if x == UIA_HyperlinkControlTypeId => Role::Link,
+        x if x == UIA_PaneControlTypeId => Role::Pane,
+        x if x == UIA_SeparatorControlTypeId => Role::Pane,
+        x if x == UIA_GroupControlTypeId => Role::Group,
+        x if x == UIA_CalendarControlTypeId || x == UIA_SemanticZoomControlTypeId => Role::Group,
+        _ => Role::Unknown,
+    }
+}

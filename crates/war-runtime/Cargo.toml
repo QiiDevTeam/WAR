@@ -1,0 +1,16 @@
+[package]
+name = "war-runtime"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+crossbeam-channel.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+war-core = { path = "../war-core" }
+war-protocol = { path = "../war-protocol" }
+war-semantic = { path = "../war-semantic" }
+war-win32 = { path = "../war-win32" }
+

@@ -1,0 +1,11 @@
+[package]
+name = "war-win32"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+war-protocol = { path = "../war-protocol" }
+windows.workspace = true
+

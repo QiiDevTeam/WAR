@@ -1,0 +1,7 @@
+/target/
+/novel-helper/.anh-chat/
+*.log
+*.tmp
+*.bak
+.idea/
+.vscode/

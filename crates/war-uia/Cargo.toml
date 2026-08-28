@@ -1,0 +1,14 @@
+[package]
+name = "war-uia"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+crossbeam-channel.workspace = true
+war-core = { path = "../war-core" }
+war-protocol = { path = "../war-protocol" }
+war-win32 = { path = "../war-win32" }
+windows.workspace = true
+windows-core.workspace = true

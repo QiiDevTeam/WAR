@@ -1,0 +1,20 @@
+[package]
+name = "war-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "war"
+path = "src/main.rs"
+
+[dependencies]
+clap.workspace = true
+serde_json.workspace = true
+war-core = { path = "../war-core" }
+war-mcp = { path = "../war-mcp" }
+war-protocol = { path = "../war-protocol" }
+war-runtime = { path = "../war-runtime" }
+war-semantic = { path = "../war-semantic" }
+war-uia = { path = "../war-uia" }
